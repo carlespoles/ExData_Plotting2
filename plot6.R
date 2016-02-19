@@ -73,8 +73,10 @@ for (i in 1:length(totalEmissionYearLA)) {
     
 }
 
+# We will create 2 plots in 1 row.
 par(mfrow = c(1,2))
 
+# We specify the Y axis data range to be applied for both plots, so they have the same scale.
 dataRange <- range(yearEmissionsBaltimore, yearEmissionsLA, na.rm = TRUE)
 
 plot(dataYearsBaltimore, yearEmissionsBaltimore, pch = 19, xlab = "Year", ylab = "Total Emissions", main = "Vehicle Emissions - Baltimore City", type = "b", ylim = dataRange)
